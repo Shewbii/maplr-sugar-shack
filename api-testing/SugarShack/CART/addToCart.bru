@@ -1,0 +1,19 @@
+meta {
+  name: addToCart
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/cart?productId=1
+  body: none
+  auth: none
+}
+
+params:query {
+  productId: 1
+}
+
+body:json {
+  2
+}

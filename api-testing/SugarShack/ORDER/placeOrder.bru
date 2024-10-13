@@ -1,0 +1,20 @@
+meta {
+  name: placeOrder
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/order
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "productId": 100,
+      "qty": 300
+    }
+  ]
+}

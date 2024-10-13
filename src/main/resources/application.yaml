@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: maplr-sugar-shack
+# swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+---
+spring:
+  profiles:
+    active:
+      on-profile: "load-data"
+flyway:
+  locations: classpath:db/migration/,classpath:db/testdata/

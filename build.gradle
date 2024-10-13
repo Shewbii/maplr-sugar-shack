@@ -23,6 +23,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.flywaydb:flyway-core'
 	implementation 'org.flywaydb:flyway-database-postgresql'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+	// https://mvnrepository.com/artifact/org.mapstruct/mapstruct
+	implementation 'org.mapstruct:mapstruct:1.6.2'
+	// https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-jpamodelgen
+	compileOnly 'org.hibernate.orm:hibernate-jpamodelgen:6.6.1.Final'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 	runtimeOnly 'org.postgresql:postgresql'
@@ -31,6 +36,7 @@ dependencies {
 	testImplementation 'org.testcontainers:junit-jupiter'
 	testImplementation 'org.testcontainers:postgresql'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.2'
 }
 
 tasks.named('test') {
