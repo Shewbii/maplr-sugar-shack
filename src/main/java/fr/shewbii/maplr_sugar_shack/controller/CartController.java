@@ -32,7 +32,7 @@ public class CartController {
         cartService.removeFromCart(productId);
     }
 
-    @PatchMapping("/changeQty")
+    @PatchMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void changeQty(@RequestParam Integer productId, @RequestParam Integer newQty) {
         cartService.changeQty(productId, newQty);
