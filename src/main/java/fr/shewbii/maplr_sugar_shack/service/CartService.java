@@ -7,6 +7,7 @@ import fr.shewbii.maplr_sugar_shack.models.dto.CartLineDto;
 import fr.shewbii.maplr_sugar_shack.models.entity.OrderLine;
 import fr.shewbii.maplr_sugar_shack.models.entity.Product;
 import fr.shewbii.maplr_sugar_shack.repository.OrderLineRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class CartService {
 
     @Autowired

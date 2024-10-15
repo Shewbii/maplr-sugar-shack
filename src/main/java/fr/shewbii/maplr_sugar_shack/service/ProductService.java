@@ -4,6 +4,7 @@ import fr.shewbii.maplr_sugar_shack.exception.EntityNotFoundException;
 import fr.shewbii.maplr_sugar_shack.models.entity.Product;
 import fr.shewbii.maplr_sugar_shack.models.enums.SyrupTypeEnum;
 import fr.shewbii.maplr_sugar_shack.repository.ProductRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.Optional;
 import static fr.shewbii.maplr_sugar_shack.repository.spec.ProductSpecification.isType;
 
 @Service
+@Transactional
 public class ProductService {
 
     @Autowired
