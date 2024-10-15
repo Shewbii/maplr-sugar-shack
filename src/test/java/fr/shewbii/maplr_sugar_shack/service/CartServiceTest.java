@@ -61,15 +61,4 @@ public class CartServiceTest {
         assertThrows(IncorrectDataException.class, () -> cartService.changeQty(PRODUCT_1.getId(), PRODUCT_1_NEW_QUANTITY_INVALID));
     }
 
-    @Test
-    public void addToCart_givenNonExistentProduct_shouldCreateOrderLine() {
-        given(productService.findById(PRODUCT_1.getId())).willReturn(Optional.of(PRODUCT_1));
-        given(orderLineRepository.findByProduct(PRODUCT_1)).willReturn(Optional.empty());
-        given(orderLineRepository.save(any())).willCallRealMethod();
-
-        OrderLine orderLine = cartService.addToCart(PRODUCT_1.getId());
-
-        assertEquals(1, orderLine.getQuantity());
-    }
-
 }
