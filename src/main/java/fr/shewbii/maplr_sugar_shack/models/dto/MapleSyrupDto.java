@@ -4,6 +4,7 @@ import fr.shewbii.maplr_sugar_shack.models.enums.SyrupTypeEnum;
 
 public record MapleSyrupDto(
         Integer id,
+        String name,
         String description,
         String image,
         Double price,
